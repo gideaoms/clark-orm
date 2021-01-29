@@ -1,12 +1,13 @@
+import 'reflect-metadata';
 import { Application } from '@adonisjs/application';
 import { Registrar } from '@adonisjs/fold';
 import { Config } from '@adonisjs/config';
 import { Logger } from '@adonisjs/logger';
 import { Profiler } from '@adonisjs/profiler';
 
-const ROOT = '../../';
+const ROOT = __dirname;
 
-const application = new Application(ROOT, 'web');
+const application = new Application(ROOT, 'web', {});
 const registrar = new Registrar([application], ROOT);
 
 registrar.useProviders(['@adonisjs/events', '@adonisjs/lucid']).register();
