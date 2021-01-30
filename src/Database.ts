@@ -1,5 +1,5 @@
-import application from './application';
+import webApp from './utils/web-app';
 
-const Database = application.container.use('Adonis/Lucid/Database');
+const Database = webApp.container.use('Adonis/Lucid/Database');
 
 export default Database;

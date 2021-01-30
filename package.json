@@ -1,12 +1,15 @@
 {
   "name": "clark-orm",
-  "version": "0.0.25",
+  "version": "0.0.27",
   "private": true,
-  "description": "",
+  "description": "ClarkORM",
   "main": "application.js",
   "files": [
     "**/*"
   ],
+  "bin": {
+    "ace": "utils/ace.js"
+  },
   "typings": "./types/all.d.ts",
   "scripts": {
     "package": "gulp",
@@ -21,6 +24,7 @@
   "author": "Gideão Silva <gideaoms@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@adonisjs/ace": "^7.1.6",
     "@types/gulp": "^4.0.8",
     "@types/gulp-replace": "^0.0.31",
     "@typescript-eslint/eslint-plugin": "^4.14.1",
