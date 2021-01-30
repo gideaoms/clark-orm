@@ -13,6 +13,6 @@
     "moduleResolution": "node",
     "types": ["@adonisjs/lucid"]
   },
-  "include": ["src"],
+  "include": ["src", "README.md"],
   "exclude": ["node_modules", "dist"]
 }
