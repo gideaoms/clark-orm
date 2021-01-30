@@ -1,12 +1,12 @@
 {
   "name": "clark-orm",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "",
-  "main": "dist/types/all.ts",
+  "main": "types/all.ts",
   "files": [
-    "dist/types/all.ts"
+    "types/all.ts"
   ],
-  "typings": "./dist/types/all.d.ts",
+  "typings": "./types/all.d.ts",
   "scripts": {
     "compile": "rimraf ./dist && tsc",
     "prepare": "npm run compile"
