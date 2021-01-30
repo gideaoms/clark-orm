@@ -1,11 +1,11 @@
 {
   "name": "clark-orm",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "",
-  "main": "dist/types/application.ts",
+  "main": "dist/application.js",
   "files": [
-    "dist/types/all.ts",
-    "dist/application.ts"
+    "dist/types/all.d.ts",
+    "dist/application.js"
   ],
   "typings": "./types/all.d.ts",
   "scripts": {
