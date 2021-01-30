@@ -1,10 +1,15 @@
 {
-  "name": "clark",
-  "version": "0.0.1",
+  "name": "clark-orm",
+  "version": "0.0.2",
   "description": "",
   "main": "index.js",
+  "files": [
+    "dist"
+  ],
+  "typings": "./dist/types/all.d.ts",
   "scripts": {
-    "compile": "rimraf ./dist && tsc"
+    "compile": "rimraf ./dist && tsc",
+    "prepare": "npm run compile"
   },
   "keywords": [],
   "repository": {
@@ -14,8 +19,6 @@
   "author": "Gideão Silva <gideaoms@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "@types/luxon": "^1.25.1",
-    "@types/node": "^14.14.22",
     "@typescript-eslint/eslint-plugin": "^4.14.1",
     "@typescript-eslint/parser": "^4.14.1",
     "eslint": "^7.18.0",
@@ -23,8 +26,6 @@
     "eslint-config-standard": "^16.0.2",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-standard": "^5.0.0",
-    "luxon": "^1.25.0",
-    "pg": "^8.5.1",
     "prettier": "^2.2.1",
     "rimraf": "^3.0.2",
     "typescript": "^4.1.3"

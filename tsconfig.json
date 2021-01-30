@@ -9,6 +9,7 @@
     "forceConsistentCasingInFileNames": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
+    "declaration": true,
     "types": ["@adonisjs/lucid"]
   },
   "include": ["src"],

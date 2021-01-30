@@ -1,4 +1,4 @@
-import application from '../application';
+import application from './application';
 
 const Database = application.container.use('Adonis/Lucid/Database');
 
