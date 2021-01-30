@@ -1,6 +1,6 @@
 {
   "name": "clark-orm",
-  "version": "0.0.27",
+  "version": "0.0.30",
   "private": true,
   "description": "ClarkORM",
   "main": "application.js",
