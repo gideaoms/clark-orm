@@ -3,5 +3,6 @@
 module.exports = clarkOrm;
 
 function clarkOrm() {
-    // TODO
+  // TODO
+  console.log('oi');
 }
