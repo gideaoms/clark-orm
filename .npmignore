@@ -1,9 +1,0 @@
-.vscode
-node_modules
-src
-.editorconfig
-.eslintignore
-.eslintrc.json
-.gitignore
-.prettierrc.json
-
