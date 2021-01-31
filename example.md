@@ -43,7 +43,7 @@ module.exports = {
 ```
 5.
 ```sh
-npx knex make:migrate create-city
+npx knex migrate:make create-city
 ```
 6. edit the migration you just created
 
