@@ -1,4 +1,4 @@
-import webApp from './utils/web-app';
+import { useContainer } from './index';
 
-export const { BaseModel, scope } = webApp.container.use('Adonis/Lucid/Orm');
+export const { BaseModel, scope } = useContainer('Adonis/Lucid/Orm');
 export * from '@adonisjs/lucid/build/src/Orm/Decorators';
