@@ -22,7 +22,8 @@
     "mariadb",
     "sqlite",
     "sql-server",
-    "oracle"
+    "oracle",
+    "knex"
   ],
   "repository": {
     "type": "git",
