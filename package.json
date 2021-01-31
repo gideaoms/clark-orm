@@ -1,6 +1,6 @@
 {
   "name": "clark-orm",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "private": true,
   "description": "ClarkORM",
   "main": "index.js",
@@ -27,7 +27,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gideaoms/clark.git"
+    "url": "git+https://github.com/gideaoms/clark-orm.git"
   },
   "author": "Gideão Silva <gideaoms@gmail.com>",
   "license": "MIT",
