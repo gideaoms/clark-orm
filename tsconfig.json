@@ -7,12 +7,8 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
     "declaration": true,
-    "moduleResolution": "node",
     "types": ["@adonisjs/lucid"]
   },
-  "include": ["src", "./README.md"],
-  "exclude": ["node_modules", "dist"]
+  "include": ["src"]
 }
