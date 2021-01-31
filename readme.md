@@ -47,7 +47,6 @@ Lucid has a lot of options, but what do you can do using ClarkORM? We offer some
 ```js
 clark-orm/Orm
 clark-orm/Database
-clark-orm/Schema
 clark-orm/Factory
 clark-orm/Seeder
 ```

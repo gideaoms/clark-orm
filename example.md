@@ -46,8 +46,6 @@ module.exports = {
 npx knex make:migrate create-city
 ```
 6. edit the migration you just created
-
-6.1 using knex
 ```js
 import * as Knex from 'knex';
 
@@ -63,26 +61,6 @@ export const up = (knex: Knex) => {
 export const down = (knex: Knex) => {
   return knex.schema.dropSchema('cities');
 };
-```
-6.2 using clark-orm
-```js
-import BaseSchema from 'clark-orm/Schema'
-
-export default class Cities extends BaseSchema {
-  protected tableName = 'cities'
-
-  public async up () {
-    this.schema.createTable(this.tableName, (table) => {
-      table.increments('id').primary()
-      table.string('name').notNullable()
-      table.timestamps()
-    })
-  }
-
-  public async down () {
-    this.schema.dropTable(this.tableName)
-  }
-}
 ```
 7.
 ```sh
