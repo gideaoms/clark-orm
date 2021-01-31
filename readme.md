@@ -42,7 +42,7 @@ export class CityModel extends BaseModel {
 }
 ```
 
-Lucid has a lot of options, but what do you can do using ClarkORM? We offer two things:
+Lucid has a lot of options, but what do you can do using ClarkORM? We offer some things that you can use like you would use with Lucid:
 ```js
 clark-orm/Orm
 clark-orm/Database
