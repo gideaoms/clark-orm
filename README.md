@@ -42,6 +42,15 @@ export class CityModel extends BaseModel {
 }
 ```
 
+Lucid has a lot of options, but what do you can do using ClarkORM? We offer two things:
+```js
+clark-orm/Orm
+clark-orm/Database
+clark-orm/Schema
+clark-orm/Factory
+clark-orm/Seeder
+```
+
 You can learn more about the models [here](https://preview.adonisjs.com/guides/models/introduction).
 
 *We use the variables contained in the knexfile because Lucid ORM is built on top of knex*
