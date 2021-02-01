@@ -4,7 +4,7 @@ import replace from 'gulp-replace';
 
 const compile = () => gulp.src('package.json').pipe(shell('npm run compile', { quiet: true }));
 
-const copy = () => gulp.src(['src/**/*', 'readme.md']).pipe(gulp.dest('dist'));
+const copy = () => gulp.src(['readme.md']).pipe(gulp.dest('dist'));
 
 const update = () =>
   gulp.src('package.json').pipe(replace('"private": true,', '"private": false,')).pipe(gulp.dest('dist'));
