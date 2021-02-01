@@ -29,7 +29,7 @@ import { BaseModel, column } from "clark-orm/Orm";
 export class CityModel extends BaseModel {
   public static table = "cities";
 
-  @column({ isPrimary: true, serializeAs: null })
+  @column({ isPrimary: true })
   public id!: number;
 
   @column()
