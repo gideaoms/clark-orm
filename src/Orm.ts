@@ -1,4 +1,5 @@
 import { useContainer } from './index';
 
-export const { BaseModel, scope } = useContainer('Adonis/Lucid/Orm');
-export * from '@adonisjs/lucid/build/src/Orm/Decorators';
+const Orm = useContainer('Adonis/Lucid/Orm');
+
+export default Orm;
