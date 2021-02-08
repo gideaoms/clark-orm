@@ -4,9 +4,9 @@ import replace from 'gulp-replace';
 
 const compile = () => gulp.src('package.json').pipe(shell('npm run compile', { quiet: true }));
 
-const destroy = () => gulp.src(['dist']).pipe(shell('cd dist && rm Orm.d.ts && rm web-app.d.ts'));
+const destroy = () => gulp.src(['dist']).pipe(shell('cd dist && rm web-app.d.ts'));
 
-const copy = () => gulp.src(['readme.md', 'src/Orm.d.ts']).pipe(gulp.dest('dist'));
+const copy = () => gulp.src(['src/Orm.d.ts']).pipe(gulp.dest('dist'));
 
 const update = () =>
   gulp.src('package.json').pipe(replace('"private": true,', '"private": false,')).pipe(gulp.dest('dist'));
