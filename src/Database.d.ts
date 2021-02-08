@@ -1,2 +1,5 @@
-/// <reference types="@adonisjs/lucid/build/adonis-typings/database" />
-export * from '@ioc:Adonis/Lucid/Database';
+/// <reference types="@adonisjs/lucid" />
+
+import Database from '@ioc:Adonis/Lucid/Database';
+
+export default Database;

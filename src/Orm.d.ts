@@ -1,2 +1,3 @@
-/// <reference types="@adonisjs/lucid/build/adonis-typings/orm" />
+/// <reference types="@adonisjs/lucid" />
+
 export * from '@ioc:Adonis/Lucid/Orm';

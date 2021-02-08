@@ -1,2 +1,5 @@
-/// <reference types="@adonisjs/lucid/build/adonis-typings/seeder" />
-export * from '@ioc:Adonis/Lucid/Seeder';
+/// <reference types="@adonisjs/lucid" />
+
+import Seeder from '@ioc:Adonis/Lucid/Seeder';
+
+export default Seeder;

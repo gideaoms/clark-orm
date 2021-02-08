@@ -2,7 +2,7 @@ import gulp from 'gulp';
 import shell from 'gulp-shell';
 import replace from 'gulp-replace';
 
-const compile = () => gulp.src('package.json').pipe(shell('npm run compile', { quiet: true }));
+const compile = () => gulp.src('package.json').pipe(shell('npm run compile'));
 
 const copy = () => gulp.src(['src/**/*.d.ts']).pipe(gulp.dest('dist'));
 
