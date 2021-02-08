@@ -4,11 +4,13 @@ import replace from 'gulp-replace';
 
 const compile = () => gulp.src('package.json').pipe(shell('npm run compile', { quiet: true }));
 
-const copy = () => gulp.src(['readme.md']).pipe(gulp.dest('dist'));
+const destroy = () => gulp.src(['dist']).pipe(shell('cd dist && rm Orm.d.ts && rm web-app.d.ts'));
+
+const copy = () => gulp.src(['readme.md', 'src/Orm.d.ts']).pipe(gulp.dest('dist'));
 
 const update = () =>
   gulp.src('package.json').pipe(replace('"private": true,', '"private": false,')).pipe(gulp.dest('dist'));
 
 const publish = () => gulp.src('package.json').pipe(shell('cd dist && npm publish'));
 
-export default gulp.series(compile, copy, update, publish);
+export default gulp.series(compile, destroy, copy, update, publish);

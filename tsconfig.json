@@ -10,5 +10,6 @@
     "declaration": true,
     "types": ["@adonisjs/lucid"]
   },
-  "include": ["src"]
+  "include": ["src"],
+  "exclude": ["src/Orm.d.ts"]
 }

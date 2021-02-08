@@ -1,4 +1,4 @@
-import { useContainer } from './index';
+import { useContainer } from './web-app';
 
 const Seeder = useContainer('Adonis/Lucid/Seeder');
 
