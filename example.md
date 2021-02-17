@@ -99,5 +99,5 @@ main();
 ```
 9.
 ```sh
-npx ts-node -T index.ts
+npx ts-node index.ts
 ```
