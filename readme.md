@@ -60,7 +60,3 @@ You can learn more about the models [here](https://preview.adonisjs.com/guides/m
 To use ClarkORM you need to know at least a little about [knex](http://knexjs.org/) and [Lucid](https://preview.adonisjs.com/guides/models/introduction)
 
 Do you like to learn with examples? We have one [here](https://github.com/gideaoms/clark-orm/blob/main/example.md)
-
-## Author
-
-[Gideão Silva](https://github.com/gideaoms)
