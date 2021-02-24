@@ -10,7 +10,7 @@ ClarkORM is a [Typescript](https://www.typescriptlang.org/) ORM built on top of 
 
 ## How it works
 
-ClarkORM is built on top of Lucid ORM and Lucid ORM is built on top of [knex](http://knexjs.org/). The idea of ClarkORM is let you manage yours *migrations* and *seeds* with knex the way you already do. But when it comes to Models ClarkORM comes on scene.
+ClarkORM is built on top of Lucid ORM and Lucid ORM is built on top of [knex](http://knexjs.org/). The idea of ClarkORM is let you manage your *migrations* and *seeds* with knex the way you already do. But when it comes to Models ClarkORM comes on scene.
 
 ## Installation
 
