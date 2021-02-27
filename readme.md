@@ -49,6 +49,7 @@ clark-orm/Orm
 clark-orm/Database
 clark-orm/Factory
 clark-orm/Seeder
+clark-orm/Event
 ```
 
 You can learn more about the models [here](https://preview.adonisjs.com/guides/models/introduction).
