@@ -7,24 +7,37 @@ import { Logger } from '@adonisjs/logger';
 import { Profiler } from '@adonisjs/profiler';
 
 const appRoot = __dirname;
+// const webApp = new Application(appRoot, 'web', { providers: ['@adonisjs/lucid'] });
 const webApp = new Application(appRoot, 'web', {});
 const registrar = new Registrar([webApp], appRoot);
 const knexfile = require(join(appRoot, '..', '..', 'knexfile'));
 
 webApp.container.singleton('Adonis/Core/Config', () => {
+  const isSqliteConnection = knexfile.client === 'sqlite';
+  const connection = isSqliteConnection
+    ? {
+        connection: {
+          filename: knexfile.connections.sqlite.connection.filename,
+        },
+        useNullAsDefault: true,
+        healthCheck: false,
+      }
+    : {
+        connection: {
+          host: knexfile.connection.host,
+          port: knexfile.connection.port,
+          user: knexfile.connection.user,
+          password: knexfile.connection.password,
+          database: knexfile.connection.database,
+        },
+      };
   return new Config({
     database: {
       connection: knexfile.client,
       connections: {
         [knexfile.client]: {
           client: knexfile.client,
-          connection: {
-            host: knexfile.connection.host,
-            port: knexfile.connection.port,
-            user: knexfile.connection.user,
-            password: knexfile.connection.password,
-            database: knexfile.connection.database,
-          },
+          ...connection,
         },
       },
     },

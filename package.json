@@ -1,6 +1,6 @@
 {
   "name": "clark-orm",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "description": "ClarkORM",
   "files": [
@@ -33,6 +33,7 @@
   "devDependencies": {
     "@types/gulp": "^4.0.8",
     "@types/gulp-replace": "^0.0.31",
+    "@types/luxon": "^1.26.2",
     "@typescript-eslint/eslint-plugin": "^4.14.1",
     "@typescript-eslint/parser": "^4.14.1",
     "eslint": "^7.21.0",
@@ -44,19 +45,21 @@
     "gulp-cli": "^2.3.0",
     "gulp-replace": "^1.0.0",
     "gulp-shell": "^0.8.0",
+    "luxon": "^1.26.0",
     "prettier": "^2.2.1",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
+    "sqlite3": "^5.0.2",
     "ts-node": "^9.1.1",
     "typescript": "^4.2.3"
   },
   "dependencies": {
-    "@adonisjs/application": "^4.0.2",
-    "@adonisjs/config": "^3.0.0",
-    "@adonisjs/events": "^6.0.0",
-    "@adonisjs/fold": "^8.0.1",
-    "@adonisjs/logger": "^4.0.0",
+    "@adonisjs/application": "^3.0.21",
+    "@adonisjs/config": "^2.0.3",
+    "@adonisjs/events": "^5.0.6",
+    "@adonisjs/fold": "^7.0.9",
+    "@adonisjs/logger": "^3.0.4",
     "@adonisjs/lucid": "^11.0.1",
-    "@adonisjs/profiler": "^6.0.1"
+    "@adonisjs/profiler": "^5.0.4"
   }
 }

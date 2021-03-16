@@ -8,7 +8,10 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "declaration": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "strictPropertyInitialization": false,
     "types": ["@adonisjs/lucid"]
   },
-  "include": ["src"]
+  "include": ["src", "example"]
 }
