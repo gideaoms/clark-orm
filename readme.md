@@ -2,6 +2,8 @@
 
 # ClarkORM
 
+Please, give us a star :star: 
+
 ClarkORM is a [Typescript](https://www.typescriptlang.org/) ORM built on top of [Lucid ORM](https://preview.adonisjs.com/guides/database/introduction) (AdonisJS V5).
 
 ## Why
