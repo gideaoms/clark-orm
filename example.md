@@ -47,7 +47,7 @@ npx knex migrate:make create-city
 ```
 6. edit the migration you just created
 ```js
-import * as Knex from 'knex';
+import { Knex } from 'knex';
 
 export const up = (knex: Knex) => {
   return knex.schema.createTable('cities', (table) => {
