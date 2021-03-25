@@ -1,6 +1,6 @@
 {
   "name": "clark-orm",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "private": true,
   "description": "ClarkORM",
   "files": [
@@ -56,7 +56,7 @@
     "@adonisjs/events": "^5.0.6",
     "@adonisjs/fold": "^7.0.9",
     "@adonisjs/logger": "^3.0.4",
-    "@adonisjs/lucid": "^11.0.1",
+    "@adonisjs/lucid": "^12.0.0",
     "@adonisjs/profiler": "^5.0.4"
   }
 }
