@@ -7,7 +7,6 @@ import { Logger } from '@adonisjs/logger';
 import { Profiler } from '@adonisjs/profiler';
 
 const appRoot = __dirname;
-// const webApp = new Application(appRoot, 'web', { providers: ['@adonisjs/lucid'] });
 const webApp = new Application(appRoot, 'web', {});
 const registrar = new Registrar([webApp], appRoot);
 const knexfile = require(join(appRoot, '..', '..', 'knexfile'));

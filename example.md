@@ -13,8 +13,6 @@ npm add -D typescript ts-node
 ```
 4. create a knexfile.ts in the root of your project
 ```js
-import path from "path";
-
 module.exports = {
   client: "pg",
   connection: {
