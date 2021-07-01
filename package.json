@@ -55,7 +55,7 @@
     "@adonisjs/events": "^5.0.6",
     "@adonisjs/fold": "^7.0.9",
     "@adonisjs/logger": "^3.0.4",
-    "@adonisjs/lucid": "^14.0.0",
+    "@adonisjs/lucid": "^15.0.2",
     "@adonisjs/profiler": "^5.0.4",
     "reflect-metadata": "^0.1.13"
   }
