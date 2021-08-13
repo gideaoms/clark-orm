@@ -2,7 +2,7 @@
 
 # ClarkORM
 
-If you like this project, please give us a star :star: on Github
+If you like this project, please give us a star :star:
 
 ClarkORM is a [Typescript](https://www.typescriptlang.org/) ORM built on top of [Lucid ORM](https://preview.adonisjs.com/guides/database/introduction) (AdonisJS V5).
 
