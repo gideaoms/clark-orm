@@ -64,7 +64,7 @@ export const down = (knex: Knex) => {
 ```sh
 npx knex migrate:latest
 ```
-8. created a file name index.ts
+8. create a file named index.ts
 ```js
 import "reflect-metadata";
 import { DateTime } from "luxon";
