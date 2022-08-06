@@ -22,13 +22,7 @@ webApp.container.singleton('Adonis/Core/Config', () => {
         healthCheck: false,
       }
     : {
-        connection: {
-          host: knexfile.connection.host,
-          port: knexfile.connection.port,
-          user: knexfile.connection.user,
-          password: knexfile.connection.password,
-          database: knexfile.connection.database,
-        },
+        connection: knexfile.connection,
       };
   return new Config({
     database: {
