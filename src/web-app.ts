@@ -22,9 +22,7 @@ webApp.container.singleton('Adonis/Core/Config', () => {
         healthCheck: false,
       }
     : {
-        connection: {
-          ...knexfile.connection
-        },
+        connection: knexfile.connection,
       };
   return new Config({
     database: {
