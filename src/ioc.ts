@@ -11,7 +11,7 @@ import type { LoggerConfig } from '@ioc:Adonis/Core/Logger';
 import type { ProfilerConfig } from '@ioc:Adonis/Core/Profiler';
 
 const appRoot = __dirname;
-export const ioc = new Ioc();
+const ioc = new Ioc();
 // const knexfile = require(path.join(appRoot, '..', '..', 'knexfile'));
 
 ioc.singleton('Adonis/Core/Config', function () {
@@ -91,3 +91,5 @@ ioc.singleton('Adonis/Lucid/Factory', function () {
   const { FactoryManager } = require('@adonisjs/lucid/build/src/Factory');
   return new FactoryManager();
 });
+
+export const useContainer = ioc.use.bind(ioc);

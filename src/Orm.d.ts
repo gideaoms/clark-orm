@@ -1,3 +1,3 @@
 /// <reference types="@adonisjs/lucid" />
 
-export * from '@ioc:Adonis/Lucid/Orm';
+export type * from '@ioc:Adonis/Lucid/Orm';

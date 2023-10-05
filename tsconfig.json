@@ -7,8 +7,7 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "declaration": false,
-    "types": ["@adonisjs/lucid"]
+    "declaration": false
   },
   "include": ["src"]
 }

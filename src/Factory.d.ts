@@ -1,6 +1,6 @@
 /// <reference types="@adonisjs/lucid" />
 
-import Factory from '@ioc:Adonis/Lucid/Factory';
+import type Factory from '@ioc:Adonis/Lucid/Factory';
 
-export * from '@ioc:Adonis/Lucid/Factory';
+export type * from '@ioc:Adonis/Lucid/Factory';
 export default Factory;

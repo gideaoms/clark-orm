@@ -1,6 +1,6 @@
 /// <reference types="@adonisjs/lucid" />
 
-import Event from '@ioc:Adonis/Core/Event';
+import type Event from '@ioc:Adonis/Core/Event';
 
-export * from '@ioc:Adonis/Core/Event';
+export type * from '@ioc:Adonis/Core/Event';
 export default Event;

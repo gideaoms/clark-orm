@@ -41,7 +41,7 @@ module.exports = {
 ```
 5.
 ```sh
-npx knex migrate:make create-city
+npx knex migrate:make -x ts --esm create-city
 ```
 6. edit the migration you just created
 ```js
@@ -57,7 +57,7 @@ export const up = (knex: Knex) => {
 };
 
 export const down = (knex: Knex) => {
-  return knex.schema.dropSchema('cities');
+  return knex.schema.dropTable('cities');
 };
 ```
 7.

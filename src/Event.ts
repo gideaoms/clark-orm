@@ -1,3 +1,3 @@
-import { ioc } from './ioc';
+import { useContainer } from './ioc';
 
-export default ioc.use('Adonis/Core/Event');
+export default useContainer('Adonis/Core/Event');

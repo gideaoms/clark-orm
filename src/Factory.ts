@@ -1,3 +1,3 @@
-import { ioc } from './ioc';
+import { useContainer } from './ioc';
 
-export default ioc.use('Adonis/Lucid/Factory');
+export default useContainer('Adonis/Lucid/Factory');
