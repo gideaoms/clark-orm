@@ -1,5 +1,3 @@
-import { useContainer } from './web-app';
+import { ioc } from './ioc';
 
-const Factory = useContainer('Adonis/Lucid/Factory');
-
-export default Factory;
+export default ioc.use('Adonis/Lucid/Factory');

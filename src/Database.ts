@@ -1,5 +1,3 @@
-import { useContainer } from './web-app';
+import { ioc } from './ioc';
 
-const Database = useContainer('Adonis/Lucid/Database');
-
-export default Database;
+export default ioc.use('Adonis/Lucid/Database');

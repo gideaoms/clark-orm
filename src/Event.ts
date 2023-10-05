@@ -1,5 +1,3 @@
-import { useContainer } from './web-app';
+import { ioc } from './ioc';
 
-const Event = useContainer('Adonis/Core/Event');
-
-export default Event;
+export default ioc.use('Adonis/Core/Event');

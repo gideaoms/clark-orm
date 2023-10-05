@@ -8,7 +8,7 @@ npm init -y
 ```
 3.
 ```sh
-npm add clark-orm reflect-metadata knex pg luxon
+npm add clark-orm knex sqlite3 luxon
 npm add -D typescript ts-node
 ```
 4. create a knexfile.ts in the root of your project

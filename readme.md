@@ -2,13 +2,13 @@
 
 # ClarkORM
 
-If you like this project, please give us a star :star:
+If you like this project, please give us a star on Github.
 
-ClarkORM is a [Typescript](https://www.typescriptlang.org/) ORM built on top of [Lucid ORM](https://preview.adonisjs.com/guides/database/introduction) (AdonisJS V5).
+ClarkORM is a [Typescript](https://www.typescriptlang.org/) ORM built on top of [Lucid ORM](https://preview.adonisjs.com/guides/database/introduction) (AdonisJS).
 
 ## Why
 
-[AdonisJS](https://adonisjs.com/) is a great framework and it has one of the best ORM. But it works only in its ecosystem. Using ClarkORM you can have all the benefits of Lucid, but in any project you want.
+[AdonisJS](https://adonisjs.com/) is a great framework and it has one of the best ORM. But it works only in its ecosystem. Using ClarkORM you can have all the benefits of Lucid, but in any Node.js project you want.
 
 ## How it works
 
@@ -18,7 +18,6 @@ ClarkORM is built on top of Lucid ORM and Lucid ORM is built on top of [knex](ht
 
 ```sh
 npm install clark-orm
-npm install reflect-metadata
 npm install luxon
 ```
 
@@ -50,13 +49,30 @@ Lucid has a lot of options, but what do you can do using ClarkORM? We offer some
 clark-orm/Orm
 clark-orm/Database
 clark-orm/Factory
-clark-orm/Seeder
 clark-orm/Event
 ```
 
 You can learn more about the models [here](https://preview.adonisjs.com/guides/models/introduction).
 
-*We use the variables contained in the knexfile because Lucid ORM is built on top of knex*
+*We use the knexfile.ts in the root of your project because Lucid ORM is built on top of knex*
+```ts
+import { defineConfig } from 'clark-orm';
+
+export default defineConfig({
+  connection: 'sqlite',
+  connections: {
+    sqlite: {
+      client: 'sqlite',
+      connection: {
+        filename: './db.sqlite',
+      },
+      useNullAsDefault: true,
+      healthCheck: false,
+      debug: false,
+    },
+  },
+});
+```
 
 ## Extra
 
