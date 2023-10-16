@@ -25,6 +25,7 @@ npm install luxon
 
 Here you can configure your connection like [Adonis Lucid](https://docs.adonisjs.com/guides/database/introduction#drivers-config)
 ```ts
+// database.ts
 import { defineConfig } from "clark-orm";
 
 export const { BaseModel, Event, Database } = defineConfig({
@@ -44,8 +45,10 @@ export const { BaseModel, Event, Database } = defineConfig({
 ```
 
 ```ts
+// models/city.ts
 import { DateTime } from "luxon";
-import { BaseModel, column } from "clark-orm";
+import { column } from "clark-orm";
+import { BaseModel } from "../database";
 
 export class CityModel extends BaseModel {
   public static table = "cities";
