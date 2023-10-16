@@ -9,7 +9,7 @@ npm init -y
 3.
 ```sh
 npm add clark-orm knex sqlite3 luxon
-npm add -D typescript ts-node
+npm add -D typescript tsx
 ```
 4. create a knexfile.ts in the root of your project
 ```js
@@ -51,8 +51,8 @@ export const up = (knex: Knex) => {
   return knex.schema.createTable('cities', (table) => {
     table.increments('id').primary();
     table.string('name').notNullable();
-    table.timestamp('created_at').defaultTo(knex.fn.now());
-    table.timestamp('updated_at').defaultTo(knex.fn.now());
+    table.timestamp('created_at');
+    table.timestamp('updated_at');
   });
 };
 
@@ -64,38 +64,56 @@ export const down = (knex: Knex) => {
 ```sh
 npx knex migrate:latest
 ```
-8. create a file named index.ts
+8. create a file named database.ts
 ```js
-import "reflect-metadata";
+import { defineConfig } from "clark-orm";
+
+export const { BaseModel } = defineConfig({
+  connection: "pg",
+  connections: {
+    pg: {
+      client: "pg",
+      healthCheck: false,
+      debug: false,
+      connection: {
+        host: '...',
+        port: '...',
+        user: '...',
+        password: '...',
+        database: '...',
+      },
+    },
+  },
+})
+```
+
+9. create a file named index.ts
+```js
 import { DateTime } from "luxon";
-import { BaseModel, column } from "clark-orm/Orm";
+import { column } from "clark-orm";
+import { BaseModel } from "./database";
 
 export class CityModel extends BaseModel {
   public static table = "cities";
 
   @column({ isPrimary: true, serializeAs: null })
-  public id!: number;
+  public id: number;
 
   @column()
-  public name!: string;
+  public name: string;
 
   @column.dateTime({ autoCreate: true })
-  public createdAt!: DateTime;
+  public createdAt: DateTime;
 
   @column.dateTime({ autoCreate: true, autoUpdate: true })
-  public updatedAt!: DateTime;
+  public updatedAt: DateTime;
 }
 
-const main = async () => {
-  const createdCity = await CityModel.create({
-    name: 'Any City Name'
-  });
-  console.log(createdCity);
-}
-
-main();
+const createdCity = await CityModel
+  .create({ name: 'Any City Name' });
+console.log(createdCity);
 ```
-9.
+10.
 ```sh
-npx ts-node index.ts
+npx tsx index.ts
 ```

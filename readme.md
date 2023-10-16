@@ -23,9 +23,29 @@ npm install luxon
 
 ## Usage
 
+Here you can configure your connection like [Adonis Lucid](https://docs.adonisjs.com/guides/database/introduction#drivers-config)
+```ts
+import { defineConfig } from "clark-orm";
+
+export const { BaseModel, Event, Database } = defineConfig({
+  connection: "sqlite",
+  connections: {
+    sqlite: {
+      client: "sqlite",
+      healthCheck: false,
+      debug: false,
+      useNullAsDefault: true,
+      connection: {
+        filename: "./db.sqlite",
+      },
+    },
+  },
+})
+```
+
 ```ts
 import { DateTime } from "luxon";
-import { BaseModel, column } from "clark-orm/Orm";
+import { BaseModel, column } from "clark-orm";
 
 export class CityModel extends BaseModel {
   public static table = "cities";
@@ -44,35 +64,7 @@ export class CityModel extends BaseModel {
 }
 ```
 
-Lucid has a lot of options, but what do you can do using ClarkORM? We offer some things that you can use like you would use with Lucid:
-```js
-clark-orm/Orm
-clark-orm/Database
-clark-orm/Factory
-clark-orm/Event
-```
-
 You can learn more about the models [here](https://preview.adonisjs.com/guides/models/introduction).
-
-*We use the knexfile.ts in the root of your project because Lucid ORM is built on top of knex*
-```ts
-import { defineConfig } from 'clark-orm';
-
-export default defineConfig({
-  connection: 'sqlite',
-  connections: {
-    sqlite: {
-      client: 'sqlite',
-      connection: {
-        filename: './db.sqlite',
-      },
-      useNullAsDefault: true,
-      healthCheck: false,
-      debug: false,
-    },
-  },
-});
-```
 
 ## Extra
 
