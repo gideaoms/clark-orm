@@ -4,7 +4,7 @@
 
 If you like this project, please give us a star on Github.
 
-ClarkORM is a [Typescript](https://www.typescriptlang.org/) ORM built on top of [Lucid ORM](https://preview.adonisjs.com/guides/database/introduction) (AdonisJS).
+ClarkORM is a [Typescript](https://www.typescriptlang.org/) ORM built on top of [Lucid ORM](https://docs.adonisjs.com/guides/database/introduction) (AdonisJS).
 
 ## Why
 
@@ -67,10 +67,10 @@ export class CityModel extends BaseModel {
 }
 ```
 
-You can learn more about the models [here](https://preview.adonisjs.com/guides/models/introduction).
+You can learn more about the models [here](https://docs.adonisjs.com/guides/models/introduction).
 
 ## Extra
 
-To use ClarkORM you need to know at least a little about [knex](http://knexjs.org/) and [Lucid](https://preview.adonisjs.com/guides/models/introduction)
+To use ClarkORM you need to know at least a little about [knex](http://knexjs.org/) and [Lucid](https://docs.adonisjs.com/guides/database/introduction)
 
 Do you like to learn with examples? We have one [here](https://github.com/gideaoms/clark-orm/blob/main/example.md)

@@ -1,6 +1,6 @@
 {
   "name": "clark-orm",
-  "version": "3.5.2",
+  "version": "3.5.3",
   "private": false,
   "description": "ClarkORM",
   "main": "dist/app.js",
