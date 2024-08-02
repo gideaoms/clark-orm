@@ -1,17 +1,16 @@
 {
   "name": "clark-orm",
-  "version": "3.5.3",
+  "version": "4.0.1",
   "private": false,
   "description": "ClarkORM",
   "main": "dist/app.js",
-  "module": "dist/app.mjs",
-  "types": "dist/app.d.ts",
+  "type": "module",
   "files": [
     "dist/"
   ],
   "scripts": {
     "dev": "tsc --watch",
-    "build": "rimraf ./dist && tsup src/app.ts --format esm,cjs --dts",
+    "build": "rimraf ./dist && tsup src/app.ts --format esm --dts",
     "prepublishOnly": "npm run build"
   },
   "keywords": [
@@ -34,6 +33,7 @@
   "author": "Gideão Silva <gideaoms@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@tsconfig/node20": "^20.1.4",
     "@typescript-eslint/eslint-plugin": "6.7.4",
     "@typescript-eslint/parser": "6.7.4",
     "eslint": "8.50.0",
@@ -42,17 +42,18 @@
     "eslint-plugin-prettier": "5.0.0",
     "eslint-plugin-standard": "5.0.0",
     "prettier": "3.0.3",
-    "rimraf": "5.0.5",
-    "tsup": "^7.2.0",
-    "typescript": "5.2.2"
+    "rimraf": "6.0.1",
+    "tsup": "^8.2.3",
+    "typescript": "5.5.4"
   },
   "dependencies": {
-    "@adonisjs/config": "3.0.9",
-    "@adonisjs/events": "7.2.1",
-    "@adonisjs/fold": "8.2.0",
-    "@adonisjs/logger": "4.1.5",
-    "@adonisjs/lucid": "^18.4.2",
+    "@adonisjs/application": "^8.3.1",
+    "@adonisjs/config": "5.0.2",
+    "@adonisjs/events": "9.0.2",
+    "@adonisjs/fold": "10.1.2",
+    "@adonisjs/logger": "6.0.3",
+    "@adonisjs/lucid": "^21.1.1",
     "@adonisjs/profiler": "6.0.9",
-    "reflect-metadata": "0.1.13"
+    "reflect-metadata": "0.2.2"
   }
 }
