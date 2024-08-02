@@ -33,7 +33,6 @@ export const { BaseModel, Event, Database } = defineConfig({
   connections: {
     sqlite: {
       client: "sqlite",
-      healthCheck: false,
       debug: false,
       useNullAsDefault: true,
       connection: {

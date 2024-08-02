@@ -2,29 +2,22 @@
 ```sh
 mkdir clark-orm-example && cd clark-orm-example
 ```
-2.
+2. You should change your package.json to ```"type": "module"``` since it aims to work with ESM
 ```sh
 npm init -y
 ```
 3.
 ```sh
-npm add clark-orm knex sqlite3 luxon
-npm add -D typescript tsx
+npm add clark-orm knex sqlite3 luxon @adonisjs/lucid
+npm add -D typescript tsx @tsconfig/node20 @types/luxon
 ```
 4. create a knexfile.ts in the root of your project
 ```js
-module.exports = {
-  client: "pg",
+export default {
+  client: "sqlite3",
+  useNullAsDefault: false,
   connection: {
-    host: "localhost",
-    port: 5432,
-    user: "postgres",
-    password: "123456",
-    database: "postgres",
-  },
-  pool: {
-    min: 2,
-    max: 10,
+    filename: './db.sqlite',
   },
   migrations: {
     tableName: "knex_migrations",
@@ -37,11 +30,10 @@ module.exports = {
     directory: "database/seeds",
   },
 };
-
 ```
 5.
 ```sh
-npx knex migrate:make -x ts --esm create-city
+npx tsx node_modules/knex/bin/cli.js migrate:make city
 ```
 6. edit the migration you just created
 ```js
@@ -62,33 +54,31 @@ export const down = (knex: Knex) => {
 ```
 7.
 ```sh
-npx knex migrate:latest
+npx tsx node_modules/knex/bin/cli.js migrate:latest
 ```
 8. create a file named database.ts
 ```js
+// src/database.ts
 import { defineConfig } from "clark-orm";
 
 export const { BaseModel } = defineConfig({
-  connection: "pg",
+  connection: "sqlite",
   connections: {
-    pg: {
-      client: "pg",
-      healthCheck: false,
+    sqlite: {
+      client: "sqlite",
       debug: false,
+      useNullAsDefault: true,
       connection: {
-        host: '...',
-        port: '...',
-        user: '...',
-        password: '...',
-        database: '...',
+        filename: "./db.sqlite",
       },
     },
   },
 })
 ```
 
-9. create a file named index.ts
+9. create a file
 ```js
+// src/city.ts
 import { DateTime } from "luxon";
 import { column } from "clark-orm";
 import { BaseModel } from "./database";
@@ -108,12 +98,19 @@ export class CityModel extends BaseModel {
   @column.dateTime({ autoCreate: true, autoUpdate: true })
   public updatedAt: DateTime;
 }
-
-const createdCity = await CityModel
-  .create({ name: 'Any City Name' });
-console.log(createdCity);
 ```
-10.
+10. Create a new file
+```ts
+// main.ts
+import { Database } from './database.js'
+import { CityModel } from './city.js'
+
+const city = await CityModel.create({ name: 'City 1' });
+console.log(city.id, city.name);
+
+await Database.manager.closeAll();
+```
+11. Run
 ```sh
-npx tsx index.ts
+npx tsx src/main.ts
 ```
