@@ -80,7 +80,7 @@ export const { BaseModel } = defineConfig({
 ```js
 // src/city.ts
 import { DateTime } from "luxon";
-import { column } from "clark-orm";
+import { column } from "@adonisjs/lucid/orm";
 import { BaseModel } from "./database";
 
 export class CityModel extends BaseModel {
