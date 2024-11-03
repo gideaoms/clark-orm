@@ -50,8 +50,7 @@
     "@adonisjs/application": "^8.3.1",
     "@adonisjs/events": "9.0.2",
     "@adonisjs/logger": "6.0.3",
-    "@adonisjs/lucid": "^21.1.1",
-    "reflect-metadata": "0.2.2"
+    "@adonisjs/lucid": "^21.1.1"
   },
   "packageManager": "pnpm@9.12.3"
 }

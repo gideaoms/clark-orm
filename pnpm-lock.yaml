@@ -20,9 +20,6 @@ importers:
       '@adonisjs/lucid':
         specifier: ^21.1.1
         version: 21.1.1(@adonisjs/core@6.12.1)(luxon@3.4.4)
-      reflect-metadata:
-        specifier: 0.2.2
-        version: 0.2.2
     devDependencies:
       '@tsconfig/node20':
         specifier: ^20.1.4
@@ -2020,9 +2017,6 @@ packages:
   rechoir@0.8.0:
     resolution: {integrity: sha512-/vxpCXddiX8NGfGO/mTafwjq4aFa/71pvamip0++IQk3zG8cbCj0fifNPrjjF1XMXUne91jL9OoxmdykoEtifQ==}
     engines: {node: '>= 10.13.0'}
-
-  reflect-metadata@0.2.2:
-    resolution: {integrity: sha512-urBwgfrvVP/eAyXx4hluJivBKzuEbSQs9rKWCrCkbSxNv8mxPcUZKeuoF3Uy4mJl3Lwprp6yy5/39VWigZ4K6Q==}
 
   regexp.prototype.flags@1.5.2:
     resolution: {integrity: sha512-NcDiDkTLuPR+++OCKB0nWafEmhg/Da8aUPLPMQbK+bxKKCm1/S5he+AqYa4PlMCVBalb4/yxIRub6qkEx5yJbw==}
@@ -4449,8 +4443,6 @@ snapshots:
   rechoir@0.8.0:
     dependencies:
       resolve: 1.22.8
-
-  reflect-metadata@0.2.2: {}
 
   regexp.prototype.flags@1.5.2:
     dependencies:
