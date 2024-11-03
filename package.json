@@ -10,7 +10,7 @@
   ],
   "scripts": {
     "dev": "tsc --watch",
-    "build": "rimraf ./dist && tsup src/app.ts --format esm --dts",
+    "build": "tsup-node src/app.ts --clean --format esm --dts",
     "prepublishOnly": "npm run build"
   },
   "keywords": [
@@ -42,7 +42,6 @@
     "eslint-plugin-prettier": "5.0.0",
     "eslint-plugin-standard": "5.0.0",
     "prettier": "3.0.3",
-    "rimraf": "6.0.1",
     "tsup": "^8.2.3",
     "typescript": "5.5.4"
   },

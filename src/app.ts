@@ -12,9 +12,10 @@ const logger = new Logger({
   enabled: true,
   level: 'info',
 });
-const application = new Application(new URL('./', import.meta.url), {
-  environment: 'web',
-});
+const application = new Application(
+  new URL(import.meta.dirname, import.meta.url),
+  { environment: 'web' },
+);
 const emitter = new Emitter(application);
 
 export function defineConfig(config: DatabaseConfig) {
