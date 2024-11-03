@@ -55,5 +55,6 @@
     "@adonisjs/lucid": "^21.1.1",
     "@adonisjs/profiler": "6.0.9",
     "reflect-metadata": "0.2.2"
-  }
+  },
+  "packageManager": "pnpm@9.12.3"
 }
